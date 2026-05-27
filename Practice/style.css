@@ -5,30 +5,57 @@ p {
     animation-timing-function: ease-out;
 }
 
+#sun {
+    opacity: 0;
+    position: relative;
+    z-index: -2;
+    animation-name: zoomIn;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    translate: -15px 15px;
+}
+
+#clouds {
+    opacity: 0;
+    animation-name: slideIn;
+    animation-duration: 2.5s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
 .oval {
   width: 16px;
   height: 100px;
+  z-index: -1;
   background: rgb(151, 185, 236);
   border-radius: 10px / 10px;
   transform: skewX(-30deg);
   position: absolute;
   position: absolute;
   position: absolute;
+  animation-name: glideIn;
+  animation-duration: 1.2s;
+  animation-delay: 4s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 #ov1 {
-    left: 720px;
-    top: 400px;
+    left: 960px;
+    top: 425px;
 }
 
 #ov2 { 
-    left: 680px;
-    top: 400px;
+    left: 880px;
+    top: 425px;
+    animation-delay: 5s;
 }
 
 #ov3 {
-    left: 640px;
-    top: 400px;
+    left: 800px;
+    top: 425px;
+    animation-delay: 6s;
 }
 
 @keyframes bounceIn {
@@ -42,5 +69,43 @@ p {
     }
     100% {
         transform: scale(1);
+    }
+}
+
+@keyframes glideIn {
+    0% {
+        translate: 0px -100px;
+    }
+
+    100% {
+        opacity: 1;
+        translate: 0px 0px;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scale(0.7);
+        opacity: 1;
+        z-index: -2;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        translate: -1000px 125px;
+        opacity: 0;
+        z-index: 3;
+    }
+
+    100%{
+        translate: 500px 125px;
+        opacity: 0.95;
+        z-index: 3;
     }
 }
