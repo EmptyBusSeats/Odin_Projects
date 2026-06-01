@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+    width: 59px;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    background-color: aqua;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-height: 960px;
+    height: 59px;
+}
