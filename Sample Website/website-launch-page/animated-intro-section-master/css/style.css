@@ -34,7 +34,7 @@ General Style
   width: 100%;
   /* vertically align its content */
   display: table;
-  background: #dddfe2;
+  background: #000000;
   overflow: hidden;
 }
 
@@ -44,22 +44,31 @@ General Style
   vertical-align: middle;
   text-align: center;
   padding: 0 5%;
-  background: #dddfe2;
+  background: #000000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 .cd-intro-content h1 {
   font-size: 2.4rem;
-  font-family: 'Noto Sans';
-  color: #000000;
+  font-family: 'Orbitron';
+  font-weight: bolder;
+  text-shadow:
+    1px 1px 2px white, 
+    0em 0em 1em rgb(255, 0, 0),
+    0em 0em 0.2em rgb(255, 0, 0);
+  color: #631111;
 }
 .cd-intro-content p {
   font-size: 1.4rem;
-  font-family: 'Noto Sans';
+  font-family: 'Exo 2';
+  text-shadow:
+    1px 1px 2px rgb(135, 153, 184);
+    /*0em 0em 1em #7999dd,
+    0em 0em 0.2em #7999dd;*/
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1;
   margin: 1em 0;
-  color: #6d7a97;
+  color: #4b66a0;
 }
 .cd-intro-content .action-wrapper {
   display: inline-block;
@@ -74,12 +83,12 @@ General Style
 }
 @media only screen and (min-width: 768px) {
   .cd-intro-content h1 {
-    font-size: 5.2rem;
-    font-weight: 300;
+    font-size: 3.2rem;
+    font-weight: 100;
   }
   .cd-intro-content p {
-    font-size: 1.6rem;
-    margin: 1.5em 0 1.9em;
+    font-size: 2.4rem;
+    margin: 1.1em 0 1.35em;
   }
 }
 
@@ -91,7 +100,7 @@ General Style
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
-  background-color: #202e4a;
+  background-color: #202124;
   border-radius: .25em;
   margin-right: 1.5em;
 }
@@ -99,7 +108,7 @@ General Style
   margin-right: 0;
 }
 .cd-btn.main-action {
-  background-color: #fb5e58;
+  background-color: #a11717;
 }
 @media only screen and (min-width: 480px) {
   .cd-btn {
