@@ -93,7 +93,10 @@ General Style
 }
 
 .cd-btn {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
   padding: 1.2em 1.4em;
   font-size: 1.3rem;
   color: #ffffff;
@@ -103,13 +106,19 @@ General Style
   background-color: #202124;
   border-radius: .25em;
   margin-right: 1.5em;
+  transition: all 0.5s ease-in-out;
 }
 .cd-btn:nth-of-type(2) {
   margin-right: 0;
 }
-.cd-btn.main-action {
-  background-color: #a11717;
+
+.cd-btn:hover {
+  transform: scale(1.25);
+  box-shadow: 0 0 20px
+  rgb(231, 16, 16);
+  background-color: #503737;
 }
+
 @media only screen and (min-width: 480px) {
   .cd-btn {
     padding: 1.2em 1.6em;
@@ -141,6 +150,36 @@ General Style
 .cd-intro-content p, .no-cssanimations
 .cd-intro-content .cd-btn {
   opacity: 1;
+}
+
+#cd-intro-content-typewriter {
+  overflow: hidden;
+  border-right: .15em rgb(235, 33, 33);
+  white-space: nowrap;
+  margin: 20px auto;
+  letter-spacing: .15em;
+  opacity: 0;
+  animation:
+    typing 2s steps(40, end),
+    blink-caret .50s step-end infinite;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+/* --------------------------------
+
+Typing Effect
+
+-------------------------------- */
+
+@keyframes typing {
+  from { width: 0; opacity: 1; }
+  to { width: 100%; opacity: 1;}
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(218, 44, 44); }
 }
 
 /* -------------------------------- 
