@@ -12,3 +12,7 @@ jQuery(document).ready(function($){
 		}
 	}
 });
+
+function dropDownMenuClick() {
+	document.getElementById("handles-op").style.cssText = 'display: flex; opacity: 100%; top: 0rem;'
+}

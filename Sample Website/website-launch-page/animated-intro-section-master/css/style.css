@@ -130,14 +130,29 @@ General Style
   }
 }
 
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
 .handles {
+  animation: growDown 300ms ease-in-out forwards;
+  transform-origin: top center;
+  background-color: #696767fa;
+  border: #471e1e;
+  border-style: ridge;
   color: #ffffff;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
-  position: absolute;
-  top: 60%;
+  top: -20rem;
   padding-top: 1.6em;
+  margin: auto;
+  transition: all 1s ease-in-out;
+}
+
+#handles-op.handles {
+  opacity: 0%;
 }
 
 .socials {
@@ -186,6 +201,24 @@ General Style
     blink-caret .50s step-end infinite;
   animation-delay: 2s;
   animation-fill-mode: forwards;
+}
+
+/* --------------------------------
+
+Dropdown Menu
+
+-------------------------------- */
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
 }
 
 /* --------------------------------
