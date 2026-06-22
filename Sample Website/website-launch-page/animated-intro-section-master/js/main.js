@@ -12,3 +12,16 @@ jQuery(document).ready(function($){
 		}
 	}
 });
+
+let toggle = 0;
+function dropDownMenuClick() {
+	if (toggle == 0){
+		document.getElementById("handles-op").style.cssText = 'display: flex; opacity: 100%; top: 0rem;';
+		toggle = 1;
+	}
+
+	else{
+		document.getElementById("handles-op").style.cssText = 'opacity: 100%; transform; translateY(-20rem);';
+		toggle = 0;
+	}
+}

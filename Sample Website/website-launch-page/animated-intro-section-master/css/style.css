@@ -93,7 +93,10 @@ General Style
 }
 
 .cd-btn {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
   padding: 1.2em 1.4em;
   font-size: 1.3rem;
   color: #ffffff;
@@ -103,21 +106,87 @@ General Style
   background-color: #202124;
   border-radius: .25em;
   margin-right: 1.5em;
+  transition: all 0.5s ease-in-out;
 }
 .cd-btn:nth-of-type(2) {
   margin-right: 0;
 }
-.cd-btn.main-action {
-  background-color: #a11717;
+
+.cd-btn:hover {
+  transform: scale(1.25);
+  box-shadow: 0 0 20px
+  rgb(231, 16, 16);
+  background-color: #503737;
 }
+
 @media only screen and (min-width: 480px) {
   .cd-btn {
-    padding: 1.2em 1.6em;
+    padding: 1.4em 1.8em;
   }
 }
 @media only screen and (min-width: 768px) {
   .cd-btn {
-    padding: 1.4em 1.8em;
+    padding: 1.6em 2em;
+  }
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.handles {
+  animation: growDown 300ms ease-in-out forwards;
+  transform-origin: top center;
+  background-color: #696767fa;
+  border: #471e1e;
+  border-style: ridge;
+  color: #ffffff;
+  font-family: 'Orbitron';
+  letter-spacing: 2px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  top: -20rem;
+  padding-top: 1.6em;
+  margin: auto;
+  transition: all 1s ease-in-out;
+}
+
+#handles-op.handles {
+  opacity: 0%;
+}
+
+.socials {
+  margin-top: 0.7em;
+  padding: 1.4em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logos {
+  padding: 12px;
+  filter: grayscale(100%);
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
+}
+
+.logos:hover {
+  filter: grayscale(0%);
+  transform: scale(1.5);
+}
+
+@media only screen and (min-width: 480px) {
+  .handles {
+     width: 50%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .handles {
+    width: 25%;
   }
 }
 
@@ -141,6 +210,54 @@ General Style
 .cd-intro-content p, .no-cssanimations
 .cd-intro-content .cd-btn {
   opacity: 1;
+}
+
+#cd-intro-content-typewriter {
+  overflow: hidden;
+  border-right: .15em rgb(235, 33, 33);
+  white-space: nowrap;
+  margin: 20px auto;
+  letter-spacing: .15em;
+  opacity: 0;
+  animation:
+    typing 2s steps(40, end),
+    blink-caret .50s step-end infinite;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+/* --------------------------------
+
+Dropdown Menu
+
+-------------------------------- */
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
+
+/* --------------------------------
+
+Typing Effect
+
+-------------------------------- */
+
+@keyframes typing {
+  from { width: 0; opacity: 1; }
+  to { width: 100%; opacity: 1;}
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(218, 44, 44); }
 }
 
 /* -------------------------------- 
