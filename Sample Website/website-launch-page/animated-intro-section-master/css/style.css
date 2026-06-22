@@ -168,7 +168,8 @@ General Style
 }
 
 .logos {
-  padding: 12px;
+  padding-right: 8px;
+  padding-left: 8px;
   filter: grayscale(100%);
   transform: scale(1);
   transition: all 0.5s ease-in-out;
@@ -184,9 +185,9 @@ General Style
      width: 50%;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 900px) {
   .handles {
-    width: 25%;
+    width: 30%;
   }
 }
 
